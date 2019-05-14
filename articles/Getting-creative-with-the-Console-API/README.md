@@ -1,14 +1,14 @@
-# Getting creative with the Console API!
+# 创造性的使用 Console API！
 
-**Debugging** in JavaScript has always been inseparably connected with the **Console API**, which is most of the time used only through `console.log()`. But, did you know that it doesn't have to be this way? Hasn't `console.log()` already bored you with its **monolithic** output? Do you want to make your logs better, to make them **prettier**? 💅 If so, follow me, as we'll discover how colorful and playful Console API can really be!
+Javascript 中进行调试总是与 **Console API** 有密不可分的关系。但是往往我们只用过 `console.log()`。那么，你知道我们还可以用其他用法吗？使用`console.log()`的时候，它的大段式输出是否曾困扰过你？你想让你的调试信息更美观吗？💅如果有这个想法的话，接着往下看，我们将发现 Console API 会有多美观和有趣！
 
 # [Console.log()](https://developer.mozilla.org/en-US/docs/Web/API/Console/log)
 
-Believe it or not, but `console.log()` itself has some additional functionalities you may not know about. Of course, its basic purpose - **logging** - remains untouched. The only thing we can do is to make it look prettier! Let's try that, shall we? 😁
+别不信，`console.log()` 自身就已经有了一些你不知道的附加功能。当然，它基础的功能 - **打印日志** - 不会受到影响。我们唯一能做的事情就是将它输出的日志变漂亮。让我们尝试一下，好吗？😁
 
-## String subs
+## 字符串替换
 
-The only thing tightly related to `console.log()` method is that you can use it with so-called **string substitution**. This basically provides you an option to use specific expressions in a string, that will later be replaced by provided arguments. It can look somewhat like this:
+唯一一件和 `console.log()` 方法密不可分的事情是你可以使用一个被称为 **字符串替换** 的方式来使用它。使用这种方式，你可以先在字符串中使用一个特殊的表达式，随后使用自定义的参数替换它。它看起来就像下面这样：
 
 ```javascript
 console.log("Object value: %o with string substitution",
@@ -17,14 +17,14 @@ console.log("Object value: %o with string substitution",
 12
 ```
 
-Nice, huh? The catch is there are multiple variants of string substitution expression:
+是不是很棒？问题是这种字符串的替换方式有多种：
 
-- **%o / %O** - for objects;
-- **%d / %i** - for integers;
-- **%s** - for strings;
-- **%f** - for floating-point numbers;
+- **%o / %O** - 使用对象来替换;
+- **%d / %i** - 使用整数来替换;
+- **%s** - 使用字符串来替换;
+- **%f** - 使用浮点数来替换;
 
-But, with that said, you may wonder why to even use such a feature? Especially when you can easily pass multiple values to log, like this:
+但是，即便这样，你可能还是会问，到底啥时候需要用到这个特性呢？特别是就像下面这样，你可以简单的传递多个参数给 `log` 函数：
 
 ```javascript
 console.log("Object value: ",
@@ -33,6 +33,8 @@ console.log("Object value: ",
 
 123
 ```
+
+同时，对于字符串和数字来说，你可以就使用 `模版字符串`!那么，到底啥时候可以用到这个特性呢？第一，对于
 
 Also, for strings and numbers, you can just use **string literals**! So, what's the deal? Well, first, I'd say that when doing some nice console logging, you just want some nice strings, and string subs allow you to do just that, with ease! As for the alternatives above - you must agree - you need to keep your eyes open for all those spaces. 🛸 With subs, it's just much more convenient. As for string literals tho, they haven't been around as long as these subs (surprise! 🤯) and... they don't provide the same, nice formatting for objects. But yeah, as long as you're working with numbers and strings only, you may prefer **a different approach**.
 
